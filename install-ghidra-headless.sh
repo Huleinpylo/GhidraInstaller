@@ -122,7 +122,7 @@ create_symlinks() {
         # Create symlink if not found in PATH
         log_info "Creating symbolic link in /usr/local/bin..."
         ln -sf "$INSTALL_DIR/support/analyzeHeadless" /usr/local/bin/ghidra-headless
-
+        ln -sf "$INSTALL_DIR/support/analyzeHeadless" /usr/local/bin/analyzeHeadless
         # Verify if it worked
         if command -v ghidra-headless &> /dev/null; then
             log_info "Successfully created symlink. You can run Ghidra headless using: ghidra-headless"
